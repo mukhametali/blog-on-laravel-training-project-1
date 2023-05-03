@@ -13,7 +13,7 @@ class DropColumnPostIdToCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::table('categories', function (Blueprint $table) {
+        Schema::table('category', function (Blueprint $table) {
             $table->dropColumn('post_id');
         });
     }
@@ -25,7 +25,7 @@ class DropColumnPostIdToCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::table('categories', function (Blueprint $table) {
+        Schema::table('category', function (Blueprint $table) {
             $table->unsignedBigInteger('post_id')->nullable();
         });
     }
