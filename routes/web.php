@@ -22,7 +22,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::get('/', 'IndexController');
     });
 
-    Route::group(['namespace' => 'Post', 'prefix' => 'post'], function () {
+    Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function () {
         Route::get('/', 'IndexController')->name('admin.post.index');
         Route::get('/create', 'CreateController')->name('admin.post.create');
         Route::post('/', 'StoreController')->name('admin.post.store');
@@ -32,7 +32,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::delete('/{post}', 'DeleteController')->name('admin.post.delete');
     });
 
-    Route::group(['namespace' => 'Category', 'prefix' => 'category'], function () {
+    Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function () {
         Route::get('/', 'IndexController')->name('admin.category.index');
         Route::get('/create', 'CreateController')->name('admin.category.create');
         Route::post('/', 'StoreController')->name('admin.category.store');
