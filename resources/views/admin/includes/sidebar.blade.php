@@ -9,6 +9,14 @@
                  with font-awesome or any other icon font library -->
 
             <li class="nav-item">
+                <a href="{{ route('admin.user.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-users"></i>
+                    <p>
+                        Пользователи
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{ route('admin.post.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-clipboard"></i>
                     <p>

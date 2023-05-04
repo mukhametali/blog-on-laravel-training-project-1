@@ -48,7 +48,7 @@ class PostService
                 $data['main_image'] = Storage::disk('public')->put('/images', $data['main_image']);
             }
             $post->update($data);
-            
+
             if (isset($tagIds)) {
                 $post->tags()->sync($tagIds);
             }
